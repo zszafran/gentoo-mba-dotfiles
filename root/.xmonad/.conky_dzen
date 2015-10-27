@@ -1,0 +1,42 @@
+background yes
+out_to_console yes
+out_to_x no
+update_interval 1
+xftfont inconsolata for powerline:pixelsize:10
+
+TEXT
+^fg(\#833c9f)\
+${cpu cpu1}\
+^fg(\#7b7b7b)\
+-\
+^fg(\#833c9f)\
+${cpu cpu2}\
+^fg(\#7b7b7b)\
+-\
+^fg(\#833c9f)\
+${cpu cpu3}\
+^fg(\#7b7b7b)\
+-\
+^fg(\#833c9f)\
+${cpu cpu4}\
+^fg(\#c5c5c5)\
+   ●   \
+^fg(\#048ac7)\
+${execi 1 expr $(free -m | awk '/Mem:\s*/{print $3}')}\
+^fg(\#c5c5c5)\
+   ●   \
+^fg(\#cee318)\
+${downspeedf wlp3s0}\
+^fg(\#c5c5c5)\
+   ●   \
+^fg(\#ff005b)\
+${upspeedf wlp3s0}\
+^fg(\#c5c5c5)\
+   ●   \
+^fg(\#ffe755)\
+${wireless_essid wlp3s0}\
+^fg(\#c5c5c5)\
+   ●   \
+^fg(\#C5C5C5)\
+${time %R}\
+^fg(\#c5c5c5)\

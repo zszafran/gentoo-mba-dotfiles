@@ -1,0 +1,77 @@
+⎈URxvt*geometry: 240x84
+URxvt*loginShell: true
+URxvt*scrollColor: #777777
+URxvt*scrollstyle: plain
+URxvt*scrollTtyKeypress: true
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: false
+URxvt*secondaryScreen: true
+URxvt*secondaryScroll: true
+URxvt*skipScroll: true
+URxvt*scrollBar: false
+URxvt*scrollBar_right: false
+URxvt*scrollBar_floating: false
+URxvt*borderless: 1
+URxvt*fading: 30
+URxvt*utmpInhibit: false
+URxvt*urgentOnBell: false
+URxvt*visualBell: true
+URxvt*mapAlert: true
+URxvt*mouseWheelScrollPage: false
+URxvt*background: #1C1C1C
+URxvt*foreground: #C5C5C5
+URxvt*colorUL: yellow
+URxvt*underlineColor: yellow
+
+URxvt*font: xft:inconsolata for powerline:pixelsize:12
+URxvt*boldFont: xft:inconsolata for powerline:bold:pixelsize:12
+URxvt*italicFont: xft:inconsolata for powerline:italic:autohint=true:pixelsize=12
+URxvt*boldItalicFont: xft:inconsolata for powerline:bold:italic:autohint=true:pixelsize=12
+
+URxvt*saveLines: 1000000
+URxvt*buffered: true
+URxvt*hold: false
+URxvt*internalBorder: 0
+URxvt*print-pipe: cat > $HOME/$(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
+
+URxvt.color0:  #1C1C1C
+URxvt.color1:  #ff005b
+URxvt.color2:  #cee318
+URxvt.color3:  #ffe755
+URxvt.color4:  #048ac7
+URxvt.color5:  #833c9f
+URxvt.color6:  #0ac1cd
+URxvt.color7:  #e5e5e5
+URxvt.color8:  #666666
+URxvt.color9:  #ff00a0
+URxvt.color10: #ccff00
+URxvt.color11: #ff9f00
+URxvt.color12: #48c6ff
+URxvt.color13: #be67e1
+URxvt.color14: #63e7f0
+URxvt.color15: #f3f3f3
+
+URxvt.perl-ext-common: keyboard-select,url-select,clipboard
+URxvt.perl-ext:
+
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+
+URxvt.keysym.M-u: perl:url-select:select_next
+
+URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
+URxvt.keysym.Shift-Control-V:   perl:clipboard:paste
+URxvt.clipboard.copycmd:  xclip -i -selection clipboard
+URxvt.clipboard.pastecmd: xclip -o -selection clipboard
+
+URxvt.keysym.Control-Up: \033[1;5A
+URxvt.keysym.Control-Down: \033[1;5B
+URxvt.keysym.Control-Left: \033[1;5D
+URxvt.keysym.Control-Right: \033[1;5C
+
+dzen2.font: xft:inconsolata for powerline:pixelsize=15:hinting=true
+dzen2.foreground: #C5C5C5
+dzen2.background: #1C1C1C
+
+! Xft.dpi:       96
+! Xft.antialias: True
+! Xft.hinting:   Full
