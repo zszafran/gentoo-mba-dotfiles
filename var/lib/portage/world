@@ -21,6 +21,7 @@ gnome-extra/synapse
 media-fonts/inconsolata
 media-fonts/powerline-symbols
 media-fonts/terminus-font
+media-sound/alsa-utils
 net-libs/libssh
 net-libs/libssh2
 net-misc/connman
@@ -39,6 +40,7 @@ sys-fs/udev
 sys-fs/udev-init-scripts
 sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
+sys-power/acpid
 sys-process/htop
 virtual/man
 virtual/ssh

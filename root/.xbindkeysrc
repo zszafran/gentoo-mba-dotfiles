@@ -1,0 +1,20 @@
+"/usr/bin/kb-brightness down"
+  m:0x0 + c:237
+ 
+"/usr/bin/kb-brightness up"
+  m:0x0 + c:238
+
+"/usr/bin/bl-brightness down"
+  m:0x0 + c:232
+
+"/usr/bin/bl-brightness up"
+  m:0x0 + c:233
+
+"amixer set Master playback 1+ unmute"
+   XF86AudioRaiseVolume
+
+"amixer set Master playback 1-"
+   XF86AudioLowerVolume
+
+"amixer set Master toggle"
+   XF86AudioMute
