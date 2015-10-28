@@ -51,17 +51,18 @@ URxvt.color13: #be67e1
 URxvt.color14: #63e7f0
 URxvt.color15: #f3f3f3
 
-URxvt.perl-ext-common: keyboard-select,url-select,clipboard
-URxvt.perl-ext:
+URxvt.perl-ext-common: default,clipboard,matcher,keyboard-select
+URxvt.url-launcher: /usr/bin/chromium
+URxvt.underlineURLs: True
+URxvt.matcher.button: 1
 
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
-
 URxvt.keysym.M-u: perl:url-select:select_next
-
-URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
-URxvt.keysym.Shift-Control-V:   perl:clipboard:paste
-URxvt.clipboard.copycmd:  xclip -i -selection clipboard
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.clipboard.copycmd: xclip -i -selection clipboard
 URxvt.clipboard.pastecmd: xclip -o -selection clipboard
+URxvt.clipboard.autocopy: true
 
 URxvt.keysym.Control-Up: \033[1;5A
 URxvt.keysym.Control-Down: \033[1;5B

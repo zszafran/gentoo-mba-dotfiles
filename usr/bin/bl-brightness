@@ -1,6 +1,6 @@
 #!/bin/bash
-bldb='/sys/class/backlight/gmux_backlight/brightness'
-step=25
+bldb='/sys/class/backlight/intel_backlight/brightness'
+step=100
 current=`cat $bldb`
 new=$current
 if [ "$1" == "up" ];then

@@ -10,11 +10,11 @@
 "/usr/bin/bl-brightness up"
   m:0x0 + c:233
 
-"amixer set Master playback 1+ unmute"
+"amixer sset Master playback 1%+ unmute"
    XF86AudioRaiseVolume
 
-"amixer set Master playback 1-"
+"amixer sset Master playback 1%-"
    XF86AudioLowerVolume
 
-"amixer set Master toggle"
+"amixer sset Master toggle"
    XF86AudioMute

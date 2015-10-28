@@ -1,1 +1,2 @@
-options snd_hsa_intel model=mbp101
+options snd_hda_intel model=mbp101
+#options snd_hda_intel model=auto

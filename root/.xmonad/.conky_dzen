@@ -6,6 +6,14 @@ xftfont inconsolata for powerline:pixelsize:10
 
 TEXT
 ^fg(\#833c9f)\
+${execi 1 cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor}\
+^fg(\#c5c5c5)\
+   ●   \
+^fg(\#833c9f)\
+${execi 1 acpitool -c | awk '/Current frequency/{print $4}'}\
+^fg(\#c5c5c5)\
+   ●   \
+^fg(\#833c9f)\
 ${cpu cpu1}\
 ^fg(\#7b7b7b)\
 -\
@@ -35,6 +43,18 @@ ${upspeedf wlp3s0}\
    ●   \
 ^fg(\#ffe755)\
 ${wireless_essid wlp3s0}\
+^fg(\#c5c5c5)\
+   ●   \
+^fg(\#7b7b7b)\
+${execi 1 amixer get Master -M | grep -oE -m1 "[[:digit:]]*%"}\
+^fg(\#c5c5c5)\
+   ●   \
+^fg(\#7b7b7b)\
+${execi 1 acpitool -B | awk '/Present rate/{print $4}'}\
+^fg(\#c5c5c5)\
+   ●   \
+^fg(\#7b7b7b)\
+${execi 1 acpi -b | awk '{print $4}' | cut -b -3}\
 ^fg(\#c5c5c5)\
    ●   \
 ^fg(\#C5C5C5)\

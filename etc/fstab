@@ -14,6 +14,6 @@
 # <fs>			<mountpoint>	<type>		<opts>		<dump/pass>
 
 # NOTE: If your BOOT partition is ReiserFS, add the notail option to opts.
-/dev/sda5		/		ext4		noatime			0 1
-/dev/sda1		/mnt/efi	vfat		defaults		0 0
+UUID=b8a75818-c3c5-40e0-98fe-fae8b14aa465		/		ext4		noatime			0 1
+UUID=67E3-17ED		/mnt/efi	vfat		defaults		0 0
 /mnt/efi/EFI/GENTOO	/boot		none		defaults,bind		0 0

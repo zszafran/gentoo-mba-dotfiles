@@ -21,7 +21,9 @@ gnome-extra/synapse
 media-fonts/inconsolata
 media-fonts/powerline-symbols
 media-fonts/terminus-font
+media-plugins/alsa-plugins
 media-sound/alsa-utils
+media-sound/pavucontrol
 net-libs/libssh
 net-libs/libssh2
 net-misc/connman
@@ -40,13 +42,19 @@ sys-fs/udev
 sys-fs/udev-init-scripts
 sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
+sys-power/acpi
 sys-power/acpid
+sys-power/acpitool
+sys-power/cpupower
 sys-process/htop
 virtual/man
 virtual/ssh
 virtual/udev
 www-client/chromium
+x11-apps/intel-gpu-tools
 x11-apps/mesa-progs
+x11-apps/xclipboard
+x11-apps/xev
 x11-apps/xrdb
 x11-apps/xset
 x11-base/xorg-server
@@ -60,6 +68,7 @@ x11-misc/trayer
 x11-misc/urxvt-font-size
 x11-misc/urxvt-perls
 x11-misc/xbindkeys
+x11-misc/xclip
 x11-terms/rxvt-unicode
 x11-wm/xmonad
 x11-wm/xmonad-contrib

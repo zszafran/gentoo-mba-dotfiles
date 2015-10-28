@@ -9,3 +9,5 @@ alias dotfile-permissions="cd / && \
                            sudo git ${GIT_FLAGS} ls-files | \
                            xargs -n1 -d'\n' sudo stat -c \"%a %G %g %n\" | \
                            sudo tee /.permissions"
+alias cpu-powersave="cpupower frequency-set -g powersave"
+alias cpu-performance="cpupower frequency-set -g performance"

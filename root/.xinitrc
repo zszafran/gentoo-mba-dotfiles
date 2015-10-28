@@ -2,6 +2,7 @@ xsetroot -cursor_name left_ptr &
 xset s off &
 xset -dpms &
 xrdb -merge ~/.Xdefaults &
+xbindkeys -f ~/.xbindkeysrc &
 compton -b &
 nitrogen --restore &
 urxvtd --quiet --opendisplay --form &
