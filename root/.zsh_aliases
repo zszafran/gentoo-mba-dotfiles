@@ -9,5 +9,6 @@ alias dotfile-permissions="cd / && \
                            sudo git ${GIT_FLAGS} ls-files | \
                            xargs -n1 -d'\n' sudo stat -c \"%a %G %g %n\" | \
                            sudo tee /.permissions"
+alias rebuild-kernel="cd /usr/src/linux && make menuconfig && make && make modules_install && make install "
 alias cpu-powersave="cpupower frequency-set -g powersave"
 alias cpu-performance="cpupower frequency-set -g performance"
