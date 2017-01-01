@@ -70,14 +70,61 @@ $ env-update
 $ source /etc/profile
 ```
 
-### Emerge GCC and Utils
+### Emerge GCC
 ```shell
 $ emerge --sync
 $ emerge --oneshot gcc
-$ gcc-config 
-source /etc/profile
+$ gcc-config x86_64-pc-linux-gnu-5.4.0
+$ source /etc/profile
+```
+
+### Emerge Utils
+```shell
 $ emerge --oneshot binutils glibc
 $ emerge --oneshot portage gentoolkit
 $ emerge --update --nodeps udev-init-scripts procps
 $ emerge --update shadow openrc udev
+```
+
+### Emerge System
+```shell
+$ sh /usr/portage/scripts/bootstrap.sh
+$ emerge -e eyetem
+```
+
+### Emerge Kernel
+```shell
+$ emerge sys-kernel/gentoo-sources
+$ eselect kernel set 1
+```
+
+### Build Kernel
+```shell
+$ git --git-dir=/mnt/gentoo/repo --work-tree=/mnt/gentoo checkout --force
+$ cd /usr/src/linux
+$ make olddefconfig
+$ make modules_prepare
+$ emerge @modules-rebuid
+$ make
+$ make modules_install
+$ make install
+```
+
+### Update Scripting
+```shell
+$ perl-cleaner --reallyall
+$ python-updater
+```
+
+### Emerge World
+```shell
+$ git --git-dir=/mnt/gentoo/repo --work-tree=/mnt/gentoo checkout --force
+$ cat /var/lib/portage/world | xargs -n1 emerge -uv
+$ emerge -avDn @world
+```
+
+### Repair Emerge
+```shell
+$ revdep-rebuild
+$ emaint --fix
 ```
