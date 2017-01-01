@@ -41,16 +41,6 @@ $ tar xvjkf /mnt/gentoo/stage3.tar.bz2 -C /mnt/gentoo --overwrite
 $ rm /mnt/gentoo/stage3.tar.bz2
 ```
 
-### Init Git Repo (optional)
-```shell
-$ mkdir -p /mnt/gentoo/repo
-$ git --git-dir=/mnt/gentoo/repo init
-$ git --git-dir=/mnt/gentoo/repo remote add origin https://github.com/zszafran/gentoo-mba-dotfiles.git
-$ git --git-dir=/mnt/gentoo/repo --work-tree=/mnt/gentoo fetch
-$ git --git-dir=/mnt/gentoo/repo --work-tree=/mnt/gentoo checkout --force -t origin/master
-$ echo "*" > /mnt/gentoo/repo/.gitignore
-```
-
 ### Mount Install
 ```shell
 $ mount -t proc proc /mnt/gentoo/proc
@@ -98,6 +88,16 @@ $ emerge sys-kernel/gentoo-sources
 $ eselect kernel set 1
 ```
 
+### Init Git Repo (optional)
+```shell
+$ mkdir -p /mnt/gentoo/repo
+$ git --git-dir=/mnt/gentoo/repo init
+$ git --git-dir=/mnt/gentoo/repo remote add origin https://github.com/zszafran/gentoo-mba-dotfiles.git
+$ git --git-dir=/mnt/gentoo/repo --work-tree=/mnt/gentoo fetch
+$ git --git-dir=/mnt/gentoo/repo --work-tree=/mnt/gentoo checkout --force -t origin/master
+$ echo "*" > /mnt/gentoo/repo/.gitignore
+```
+
 ### Build Kernel
 ```shell
 $ git --git-dir=/mnt/gentoo/repo --work-tree=/mnt/gentoo checkout --force
@@ -116,10 +116,11 @@ $ perl-cleaner --reallyall
 $ python-updater
 ```
 
-### Emerge World
+### Emerge Everything
 ```shell
 $ git --git-dir=/mnt/gentoo/repo --work-tree=/mnt/gentoo checkout --force
 $ cat /var/lib/portage/world | xargs -n1 emerge -uv
+$ emerge -e system
 $ emerge -avDn @world
 ```
 
